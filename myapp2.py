@@ -15,8 +15,8 @@ def getdata():
 
 def createdata():
   data={
-    'name':'dipen',
-    'roll':250,
+    'name':'ram',
+    'roll':174,
     'city':'birgung'
    }
   json_data=json.dumps(data)

@@ -20,6 +20,11 @@ class studentserializer(serializers.Serializer):
     
     def validate(self, attrs):
         rol=attrs.get('roll')
+        nm=attrs.get('name')
         if rol>=200:
             raise serializers.ValidationError('roll must be less than 200')
+        
+        if nm.lower()=='ram':
+            raise serializers.ValidationError('name must not be ram')
+            
         return attrs
