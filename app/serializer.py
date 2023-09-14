@@ -17,3 +17,9 @@ class studentserializer(serializers.Serializer):
         instance.city=validated_data.get('city',instance.city)
         instance.save()
         return instance
+    
+    def validate(self, attrs):
+        rol=attrs.get('roll')
+        if rol>=200:
+            raise serializers.ValidationError('roll must be less than 200')
+        return attrs

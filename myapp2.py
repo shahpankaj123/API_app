@@ -15,8 +15,8 @@ def getdata():
 
 def createdata():
   data={
-    'name':'ram',
-    'roll':200,
+    'name':'dipen',
+    'roll':250,
     'city':'birgung'
    }
   json_data=json.dumps(data)
@@ -25,7 +25,7 @@ def createdata():
   print(data)
     
 #getdata()
-#createdata()
+createdata()
 
 def deletedata():
   data={
@@ -49,5 +49,5 @@ def updatedata():
   data=r.json()
   print(data)
   
-updatedata()  
+#updatedata()  
   
